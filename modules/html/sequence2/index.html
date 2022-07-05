@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
+    <link rel="stylesheet" href="../../css/styles.css" type="text/css"/>  
+    <title>ANU Escape Room</title>
+  </head>
+
+  <body>
+    <!-- Puzzle 1 Directions -->
+    <div id="puzzle1dir" class="grid-container">
+      <h1>Directions</h1>
+      <p>
+        History is what you seek,<br/>
+        A professor whose mind was keen, <br/>
+        No longer does his visage speak, <br/>
+        Professor Clark does watch, serene.
+      </p>
+      <button class="collapsible">Hint</button>
+      <p class="hint">Find the bust of Manning Clark.</p>
+      <a class="next-btn" href="#puzzle1">Next</a>      
+    </div>
+    
+
+    <!-- Puzzle 1 -->
+    <div id="puzzle1" class="grid-container">
+      <h1>Professor Clark</h1>
+      <p>
+        Wise is old Professor Clark, and keen he was in seeking the secrets of the past. <br/>
+        Many things he’s seen as he sits and watches the passing by of ages. <br/><br/>
+
+        Searching you may have done, for a book in which to look, but there is more to the swell than books on the shelves. <br/><br/>
+
+        SuperSearch is mighty in navigating the seas, but finding the treasure will require more great deeds.<br/><br/>
+
+        Open SuperSearch and into it you peer, when you search Manning’s name, what dates for his letters appear?
+      </p>        
+      <table>
+        <tbody>
+          <tr>
+            <td><a onclick="Puzzle1Wrong()">1994-1991</a></td>
+            <td><a onclick="Puzzle1Wrong()">2011-2014</a></td>
+            <td><a onclick="ValidatePuzzle1()">1938-1991</a></td>
+            <td><a onclick="Puzzle1Wrong()">1915-1991</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="puzzle1-wrong-ans">That can’t be right! Look for the item - <em>Ever, Manning: the selected letters of Manning Clark</em></p>
+      <div class="solved-riddle" id="puzzle1-correct">
+        <p>
+          Aye, those are the dates whereupon old Professor Clark did write on his pages.<br/> 
+          Stiffly he speaks, and tells you where the treasures can be found!
+        </p>
+        <a class="next-btn" href="#puzzle2dir">Next</a>
+      </div>
+      <a class="back-btn" href="#puzzle1dir">Back</a>
+    </div>
+    
+
+    <!-- Puzzle 2 Directions -->
+    <div id="puzzle2dir" class="grid-container">      
+      <h1>Directions</h1>
+      <p> 
+        More than a deck and a sail and a hull, a ship is! <br/> 
+        But still a deck it needs. To the Deck, find your way, <br/>
+        For there will be a clue to guide you to your pay.
+      </p>
+      <button class="collapsible">Hint</button>
+      <p class="hint">Go to the Deck on Level 2</p>
+      <a class="next-btn" href="#puzzle2">Next</a>
+    </div>
+
+    <!-- Puzzle 2 -->
+    <div id="puzzle2" class="grid-container">
+      <h1>Ben Gunn</h1>
+      <p>
+        Shiver me timbers! It’s old Ben Gunn, crew mate of Captain Flint, long abandoned on that fateful isle! <br/>
+        Cracked and crazed by the hot sun he may be, but if any man knows where the treasure lies, it will be he. <br/>
+        The deck of the ship shifts and rocks, old Ben is trying to write you a message with leaves and stones. <br/><br/>
+        Can you see what it says?
+      </p>
+      <form>
+        Answer: <input id="puzzle2Ans" type="text" /><br/>
+        <input type="button" value="Solve" onclick="ValidatePuzzle2()" />
+      </form>
+      <p id="puzzle2-wrong-ans">That doesn’t seem right! Look closer and match up the letters through the window!</p>
+      <div class="solved-riddle" id="puzzle2-correct">
+        <p>
+          You must go on, for you can’t turn back! Hispaniola is your ship and carry you onwards it will. <br/> 
+          Be brave and gird your loins, for the treasure is close!
+        </p>    
+        <a class="next-btn" href="#puzzle3dir">Next</a>
+      </div>        
+      <a class="back-btn" href="#puzzle2dir">Back</a>
+    </div>
+
+    <!-- Puzzle 3 Directions -->
+    <div id="puzzle3dir" class="grid-container">     
+      <h1>Directions</h1>
+      <p>
+        To copy a man’s tale is a powerful thing, <br/>
+        To hear a man’s voice, knowledge can bring, <br/>
+        One place there is that you can go, <br/>
+        To record a cast in a studio. 
+      </p>
+      <button class="collapsible">Hint</button>
+      <p class="hint">One button recording studio</p>
+      <a class="next-btn" href="#puzzle3">Next</a>
+    </div>
+
+    <!-- Puzzle 3 -->
+    <div id="puzzle3" class="grid-container">      
+      <h1>Billy Bones</h1>
+      <p>
+        You swagger onto a sandy beach, and lounging in the sand is the infamous pirate Billy Bones, bottle of rum in hand, squinting into the bright sun.  <br/><br/>
+        
+        <em> Ahoy there sailors! Is it the treasure you do seek? <br/> 
+        Arggh yes I knew him well, that murderous Flint, and well did he hide that treasure! <br/>
+        Look ye here, perhaps I may give you a heading, if a heading you need. <br/>
+        Look at this here map and decipher if you will!</em> <br/><br/>
+
+        Start ye journey where the forked river embraces a single palm tree. <br/><br/>
+
+        From thence to the Volcano’s cone ye trek, tread canny lest you fall! <br/><br/>
+
+        Find ye next the boulder which from a skull takes its shape, <br/><br/>
+
+        And fourth of these stages to the churning lake make yer way.  <br/><br/>
+
+        Till at last step careful through the marshes and find ye the snow-capped mountain range.  <br/><br/>
+
+        Here thee will find your next clue! 
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td><a onclick="Puzzle3Wrong()">East, North, South-East, North </a></td>
+            <td><a onclick="Puzzle3Wrong()">South, West, South-west, North </a></td>
+            <td><a onclick="ValidatePuzzle3()">West, South, North-west, South</a></td>
+            <td><a onclick="Puzzle3Wrong()">West, South, North-East, South </a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="puzzle3-wrong-ans">Argh, that’s not it! Make sure you’re following the instructions correctly! </p>    
+      <div class="solved-riddle" id="puzzle3-correct">
+        <p>
+          Aye, the map reads true and those headings will lead your to your next clue!   
+        </p>   
+        <a class="next-btn" href="#puzzle6dir">Next</a>     
+      </div>
+      <a class="back-btn" href="#puzzle3dir">Back</a>
+    </div>
+
+    <!-- Puzzle 4 Directions -->
+    <div id="puzzle4dir" class="grid-container">  
+      <h1>Directions</h1>
+      <p>
+        Quick as a whip, <br/>
+        If you need to do study,<br/>
+        Sit on your own or work with a buddy,<br/>
+        These books you can borrow for a short trip,<br/>
+        But only for two hours at a clip.
+      </p>
+      <button type="button" class="collapsible">Hint</button>
+      <p class="hint">Short loan area on level 2</p>
+      <a class="next-btn" href="#puzzle4">Next</a>
+    </div>
+
+    <!-- Puzzle 4 -->
+    <div id="puzzle4" class="grid-container">      
+      <h1>Library Search</h1>
+      <p>
+        Information everywhere lies, a sea of things so deep and dark.<br/>
+        A thousand answers, waiting to be found, if only you know where to look. <br/>
+        The Library Search is your map to the world, a compass to follow amongst the shoals. <br/>
+        Open it now, for the treasure you seek, what is the call number for Treasure Island? <br/>
+        Go canny however, for more than one copy resides in the catalogue! <br/>
+        Find the book that lives here in Chifley!
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td><a onclick="ValidatePuzzle4()">PR5486.A2R5</a></td>
+            <td><a onclick="Puzzle4Wrong()">PT2663.A64 R4513</a></td>
+            <td><a onclick="Puzzle4Wrong()">Mortlake 07844</a></td>
+            <td><a onclick="Puzzle4Wrong()">DU615.B56 1978</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="puzzle4-wrong-ans">That doesn’t seem right! Better try again!</p>
+      <div class="solved-riddle" id="puzzle4-correct">
+        <p>
+          Indeed that is the location of the tome that will guide you! 
+        </p>
+        <a class="next-btn" href="#puzzle1dir">Next</a>
+      </div>
+      <a class="back-btn" href="#puzzle4dir">Back</a>
+    </div>
+
+    <!-- Puzzle 5 Directions -->
+    <div id="puzzle5dir" class="grid-container">      
+      <h1>Directions</h1>
+      <p>
+        The catalogue you will Search,<br/>
+        The book Treasure Island you can find, <br/>
+        The key to your next clue is the call that will guide, <br/>
+        Find the shelf where this book will reside.
+      </p>
+      <button type="button" class="collapsible">Hint</button>
+      <p class="hint">Use the call number to locate the book Treasure Island on the shelf in Chifley Library. </p>
+      <a class="next-btn" href="#puzzle5">Next</a>
+    </div>
+
+    <!-- Puzzle 5 -->
+    <div id="puzzle5" class="grid-container">      
+      <h1>The Parrot</h1>
+      <p>
+        The piratical parrot perched on a spar looks down as you arrive, head cocked to the side. <br/> 
+        A knowing gleam glows in his eye – his riddle you’ll have to answer before you can continue! <br/><br/>
+        
+        <em>Much you have done, and much you have learned! Secrets untold and stones overturned! <br/>
+        To continue your quest, you must find time to rest! <br/>
+        A place for peaceful study and thought, a room for discussion to be taught. <br/>
+        Four levels up from the sea floor you need to rise, and walk round about to discover the size.</em><br/><br/>
+        How many study rooms can be found?
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td><a onclick="Puzzle5Wrong()">5</a></td>
+            <td><a onclick="ValidatePuzzle5()">8</a></td>
+            <td><a onclick="Puzzle5Wrong()">6</a></td>
+            <td><a onclick="Puzzle5Wrong()">9</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p id="puzzle5-wrong-ans">Look again brave souls, your count is amiss – how many study rooms are there on level 4?</p>
+      <div class="solved-riddle" id="puzzle5-correct">
+        <p>
+          “Hoho Hoho! Level 8 you must go! 822.4 B9861! The fun has only just
+          begun!”
+        </p>
+        <a class="next-btn" href="#puzzle4dir">Next</a>
+      </div>
+      <a class="back-btn" href="#puzzle5dir">Back</a>
+    </div>
+
+    <!-- Puzzle 6 Directions -->
+    <div id="puzzle6dir" class="grid-container">
+      <h1>Directions</h1>
+      <p>
+        Flexible you can be, <br/> 
+        A place for living technology, <br/> 
+        On level three you make your way, <br/> 
+        Find the labs where you might stay. 
+      </p>
+      <button type="button" class="collapsible">Hint</button>
+      <p class="hint">Go to the Flex Labs on Level 3</p>
+      <a class="next-btn" href="#puzzle6">Next</a>
+    </div>
+
+    <!-- Puzzle 6 -->
+    <div id="puzzle6" class="grid-container">
+      <h1>Captain Flint</h1>
+      <p>
+        Through jungles far and across oceans wide you have adventured to find your prize. <br/> 
+        Clues you have solved and puzzles unpicked and here at last on the final march you are. <br/> 
+        Tramping through the jungle vines, you see here slumped the picked-clean bones of poor old Captain Flint. <br/>  
+        His treasure is near, these bones do tell, but one final push will lead you hence. <br/> 
+        Clutched to his chest is a maze to solve, the clue to where the chest does rest. <br/><br/> 
+        
+        What is the final clue to your goal? <br/> 
+      </p>
+      <form>
+        Answer: <input id="puzzle6Ans" type="text"/><br/>
+        <input type="button" value="Solve" onclick="ValidatePuzzle6()" />
+      </form>
+      <p id="puzzle6-wrong-ans"> That doesn’t seem right! Solve the maze to see which symbols spell the answer!</p>
+      <div class="solved-riddle" id="puzzle6-correct">
+        <p>
+          Indeed that’s right, the chest that you seek, belongs to a man that’s as dead as he is!<br/> 
+          Hasten now for the end is in sight!
+        </p>
+        <a class="next-btn" href="#finishdir">Next</a>
+      </div>
+      <a class="back-btn" href="#puzzle6dir">Back</a>
+    </div>
+
+    <!-- Finish Directions -->
+    <div id="finishdir" class="grid-container">
+      <h1>Directions</h1>
+      <p>
+        Down you go, <br/>
+        To the depths that lie hidden, <br/>
+        The Library’s bottom floor feels the undertow, <br/>
+        Your feet will carry you unbidden, <br/>
+        Go find the window where the Tiger prowls, <br/>
+        Be careful not to run now afoul!
+      </p>        
+      <button type="button" class="collapsible">Hint</button>
+      <p class="hint">Go to level 1 and find the window where you can see a tiger.</p>
+      <a class="next-btn" href="#finish">Next</a>
+    </div>
+
+    <!-- Finish -->
+    <div id="finish" class="grid-container">
+      <h1>The Treasure</h1>
+      <p>
+        The chest you have found, the treasure within! Old Flint’s grand prize, hidden for years.<br/>
+        But hark what is this? There is little to be found! Someone has come and taken the treasure! <br/>
+        Return to the desk and tell Mr Hawkins – how many coins are there left in the chest?<br/><br/> 
+        
+        Return to the Information Desk and tell the staff member how many coins are in the chest to claim your prize!        
+      </p>
+      <a class="feedback-btn" href="#feedback">Finish </a>
+      <a class="back-btn" href="#finishdir">Back</a></div>
+    </div>
+
+    <!-- Feedback -->
+    <div id="feedback" class="grid-container">
+      <h1>Feedback</h1>
+      <p>
+        Congratulations! You’ve completed the Library Escape Challenge!<br/><br/>
+        
+        We would love if you could fill out the short form to tell us how we went so we can do even better next time!
+      </p>
+      <a class="next-btn" href="https://anu-au.libwizard.com/f/Escape22">Feedback</a>
+      <a class="back-btn" href="#finish">Back</a>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="../../js/collapsible.js"></script>
+    <script src="../../js/Puzzle1.js"></script>
+    <script src="../../js/Puzzle2.js"></script>
+    <script src="../../js/Puzzle3.js"></script>
+    <script src="../../js/Puzzle4.js"></script>
+    <script src="../../js/Puzzle5.js"></script>
+    <script src="../../js/Puzzle6.js"></script>
+
+  </body>
+</html>

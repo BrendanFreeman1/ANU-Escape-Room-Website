@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="modules/css/styles.css" type="text/css" />
+    <title>ANU Escape Room</title>    
+  </head>
+
+    <!-- When this page loads the randomPath function is called, getting a random number between 0 and 5.
+    This determines which 'next' button will appear when the user presses begin. 
+    Each next button opens a different html file, each with a unique sequence for the questions.
+    This is so that the groups of students follow different paths through the library and dont all go the same way.-->
+
+  <body autofocus onload="RandomPath()">   
+    <div id="intro" class="grid-container"></div>
+      <h1>Ahoy me hearties!</h1>
+      <p>
+        Look at these brave souls, come to seek the long-lost treasure of infamous Pirate Captain Flint! <br/><br/>
+        You have come to the right place, for the Library is a trove of treasures. Many secrets hide here and answers wait to be found!<br/><br/>
+        Gird your loins and trim your sails me hearties!<br/> 
+        Long John Silver seeks obsessively for the hidden treasure.<br/><br/> 
+        You, brave sailors, must venture forth into the wild and ragged shores of yore and find the chest for which he seeks!<br/> 
+      </p>
+      <button class="collapsible">Begin</button>
+      <div class="hint">
+        <div class="intro" id="0">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence1/index.html#puzzle1dir">Next</a>
+        </div>
+
+        <div class="intro" id="1">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence2/index.html#puzzle5dir">Next</a>
+        </div>
+
+        <div class="intro" id="2">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence3/index.html#puzzle2dir">Next</a>
+        </div>
+
+        <div class="intro" id="3">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence4/index.html#puzzle3dir">Next</a>
+        </div>
+
+        <div class="intro" id="4">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence5/index.html#puzzle4dir">Next</a>
+        </div>
+
+        <div class="intro" id="5">
+          <p> Set sail and seek the treasure! </p>
+          <a class="next-btn" href="modules/html/sequence6/index.html#puzzle1dir">Next</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="modules/js/Collapsible.js"></script>
+    <script src="modules/js/RandomPath.js"></script>
+
+  </body>
+</html>

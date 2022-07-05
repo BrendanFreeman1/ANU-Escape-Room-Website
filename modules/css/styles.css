@@ -1,0 +1,109 @@
+/* Fonts */
+/*Paragraph Font*/
+@font-face  {
+  font-family: Niconne;
+  src: url(../../fonts/Niconne/Niconne-Regular.ttf);
+}
+/*Heading Font*/
+@font-face {
+  font-family: Tangerine;
+  src: url(../../fonts/Tangerine/Tangerine-Regular.ttf);
+}
+/*Multiple Choise Font*/
+@font-face {
+  font-family: Dancing Script;
+  src: url(../../fonts/Dancing_Script/DancingScript-Regular.ttf);
+}
+
+/* All Page Content */
+body{
+  font-family: 'Niconne', cursive;
+  color:black;
+  font-size: 6vmin;
+  text-align: center; /* Set all elements to be centered on the page */
+  background-image: url("../../images/Background.jpg");
+  background-repeat: no-repeat; 
+  background-attachment:fixed;  
+  background-size: 100% 100%;
+  margin: 14vmin; /*Margin for all edges of the page */ 
+}
+
+/* Headings */
+h1 {
+  font-family: 'Tangerine', cursive;
+  color: #620000;
+  font-size: 12vmin;
+  margin: 0vmin; 
+}
+
+/* Emphasis */
+em {
+  color: #4e0000;
+}
+
+/* Buttons and Inputs */
+button, input[type="button"], .next-btn, .back-btn, .feedback-btn {
+  font-family: 'Niconne', cursive;
+  text-decoration-line: none;
+  color: white;  
+  font-size: 7vmin;
+  background-color: #480000da;
+  border: none;
+  border-radius: 1vmin;
+  margin-block: 5vmin;
+  padding: 2vmin 28vmin;
+}
+
+.next-btn {
+  margin-top: 5vmin;
+}
+.back-btn {
+  margin-top: 15vmin;
+}
+
+
+/* Input field box */
+input[type="text"] {
+  font-family: 'Niconne', cursive;
+  font-size: 4vmin;
+  background-color: #4800002c;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  margin-bottom: 5vmin;
+}
+
+/* Multiple choice options */
+td {
+  display:inline-block;
+  width: 40%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5vmin;
+  color: white;
+  background-color: #480000da;
+  border-radius: 1vmin;
+  margin-top: 4vmin; 
+  margin-bottom: 4vmin;
+  padding: 3vmin 3vmin;
+}
+
+
+/* Set anything inside a hint, intro or solve-riddle class to be hidden initially */
+.hint, .intro, .solved-riddle {
+  display: none;
+}
+
+/* Colour the wrong answer texts and set them to be initially hidden */
+#puzzle1-wrong-ans,#puzzle2-wrong-ans,#puzzle3-wrong-ans,#puzzle4-wrong-ans, #puzzle5-wrong-ans, #puzzle6-wrong-ans {
+  color: #790202;
+  display: none;
+}
+
+/* Seperates each Puzzle onto its own page */
+/* Don't remove this */
+.grid-container {
+  display: none;
+}
+.grid-container:target {
+  display: grid;
+}
