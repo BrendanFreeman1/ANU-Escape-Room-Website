@@ -51,16 +51,20 @@ button, input[type="button"], .next-btn, .back-btn, .feedback-btn {
   border: none;
   border-radius: 1vmin;
   margin-block: 5vmin;
-  padding: 2vmin 28vmin;
+  padding: 1vmin;
+
+  width: 100%;
+  margin-left:0;
+  margin-right:0;
+  padding-left:0;
+  padding-right:0;
+  display:block;
+  text-align:center;
 }
 
-.next-btn {
-  margin-top: 5vmin;
-}
 .back-btn {
-  margin-top: 15vmin;
+  margin-top: 10vmin;
 }
-
 
 /* Input field box */
 input[type="text"] {
@@ -82,7 +86,7 @@ td {
   color: white;
   background-color: #480000da;
   border-radius: 1vmin;
-  margin-top: 4vmin; 
+  margin-top: 4vmin;
   margin-bottom: 4vmin;
   padding: 3vmin 3vmin;
 }
@@ -99,7 +103,7 @@ td {
   display: none;
 }
 
-/* Seperates each Puzzle onto its own page */
+/* Seperates each Puzzle onto its own page, somehow */
 /* Don't remove this */
 .grid-container {
   display: none;
