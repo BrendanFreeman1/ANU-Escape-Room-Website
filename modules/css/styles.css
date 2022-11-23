@@ -1,4 +1,6 @@
-/* Fonts */
+/*===================
+        Fonts
+===================*/
 /*Paragraph Font*/
 @font-face  {
   font-family: Niconne;
@@ -15,7 +17,9 @@
   src: url(../../fonts/Dancing_Script/DancingScript-Regular.ttf);
 }
 
-/* All Page Content */
+/*===================
+         All
+===================*/
 body{
   font-family: 'Niconne', cursive;
   color:black;
@@ -28,20 +32,29 @@ body{
   margin: 14vmin; /*Margin for all edges of the page */ 
 }
 
-/* Headings */
 h1 {
   font-family: 'Tangerine', cursive;
   color: #620000;
   font-size: 12vmin;
   margin: 0vmin; 
+  margin-top: 20px;
 }
 
-/* Emphasis */
 em {
   color: #4e0000;
 }
 
-/* Buttons and Inputs */
+.grid-container {
+  display: none;
+}
+.grid-container:target {
+  display: grid;
+}
+
+/*===================
+   Buttons/Inputs
+===================*/
+
 button, input[type="button"], .next-btn, .back-btn, .feedback-btn {
   font-family: 'Niconne', cursive;
   text-decoration-line: none;
@@ -66,7 +79,7 @@ button, input[type="button"], .next-btn, .back-btn, .feedback-btn {
   margin-top: 10vmin;
 }
 
-/* Input field box */
+
 input[type="text"] {
   font-family: 'Niconne', cursive;
   font-size: 4vmin;
@@ -92,22 +105,21 @@ td {
 }
 
 
+/*===================
+        Misc
+===================*/
 /* Set anything inside a hint, intro or solve-riddle class to be hidden initially */
-.hint, .intro, .solved-riddle {
+.hint, 
+.solved-riddle {
   display: none;
 }
 
-/* Colour the wrong answer texts and set them to be initially hidden */
-#puzzle1-wrong-ans,#puzzle2-wrong-ans,#puzzle3-wrong-ans,#puzzle4-wrong-ans, #puzzle5-wrong-ans, #puzzle6-wrong-ans {
+#puzzle1-wrong-ans,
+#puzzle2-wrong-ans,
+#puzzle3-wrong-ans,
+#puzzle4-wrong-ans, 
+#puzzle5-wrong-ans, 
+#puzzle6-wrong-ans {
   color: #790202;
   display: none;
-}
-
-/* Seperates each Puzzle onto its own page, somehow */
-/* Don't remove this */
-.grid-container {
-  display: none;
-}
-.grid-container:target {
-  display: grid;
 }

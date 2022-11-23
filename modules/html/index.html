@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    
-    <link rel="stylesheet" href="../../css/styles.css" type="text/css"/>  
+    <link rel="stylesheet" href="../css/styles.css" type="text/css"/>  
     <title>ANU Escape Room</title>
   </head>
 
@@ -40,10 +40,10 @@
       <table>
         <tbody>
           <tr>
-            <td><a onclick="Puzzle1Wrong()">1994-1991</a></td>
-            <td><a onclick="Puzzle1Wrong()">2011-2014</a></td>
-            <td><a onclick="ValidatePuzzle1()">1938-1991</a></td>
-            <td><a onclick="Puzzle1Wrong()">1915-1991</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle1')">1994-1991</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle1')">2011-2014</a></td>
+            <td><a onclick="MultipleChoiceCorrect('puzzle1')">1938-1991</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle1')">1915-1991</a></td>
           </tr>
         </tbody>
       </table>
@@ -53,7 +53,7 @@
           Aye, those are the dates whereupon old Professor Clark did write on his pages.<br/> 
           Stiffly he speaks, and tells you where the treasures can be found!
         </p>
-        <a class="next-btn" href="#puzzle2dir">Next</a>
+        <a onclick="GetRandomPuzzle('puzzle1next')" class="next-btn" id="puzzle1next" href="#">Next</a>
       </div>
       <a class="back-btn" href="#puzzle1dir">Back</a>
     </div>
@@ -83,7 +83,7 @@
       </p>
       <form>
         Answer: <input id="puzzle2Ans" type="text" /><br/>
-        <input type="button" value="Solve" onclick="ValidatePuzzle2()" />
+        <input type="button" value="Solve" onclick="InputPuzzle('puzzle2', 'hispaniola')" />
       </form>
       <p id="puzzle2-wrong-ans">That doesn’t seem right! Look closer and match up the letters through the window!</p>
       <div class="solved-riddle" id="puzzle2-correct">
@@ -91,7 +91,7 @@
           You must go on, for you can’t turn back! Hispaniola is your ship and carry you onwards it will. <br/> 
           Be brave and gird your loins, for the treasure is close!
         </p>    
-        <a class="next-btn" href="#puzzle3dir">Next</a>
+        <a onclick="GetRandomPuzzle('puzzle2next')" class="next-btn" id="puzzle2next" href="">Next</a>
       </div>        
       <a class="back-btn" href="#puzzle2dir">Back</a>
     </div>
@@ -136,10 +136,10 @@
       <table>
         <tbody>
           <tr>
-            <td><a onclick="Puzzle3Wrong()">East, North, South-East, North </a></td>
-            <td><a onclick="Puzzle3Wrong()">South, West, South-west, North </a></td>
-            <td><a onclick="ValidatePuzzle3()">West, South, North-west, South</a></td>
-            <td><a onclick="Puzzle3Wrong()">West, South, North-East, South </a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle3')">East, North, South-East, North </a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle3')">South, West, South-west, North </a></td>
+            <td><a onclick="MultipleChoiceCorrect('puzzle3')">West, South, North-west, South</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle3')">West, South, North-East, South </a></td>
           </tr>
         </tbody>
       </table>
@@ -147,8 +147,8 @@
       <div class="solved-riddle" id="puzzle3-correct">
         <p>
           Aye, the map reads true and those headings will lead your to your next clue!   
-        </p>   
-        <a class="next-btn" href="#puzzle6dir">Next</a>     
+        </p>
+        <a onclick="GetRandomPuzzle('puzzle3next')" class="next-btn" id="puzzle3next">Next</a>
       </div>
       <a class="back-btn" href="#puzzle3dir">Back</a>
     </div>
@@ -182,10 +182,10 @@
       <table>
         <tbody>
           <tr>
-            <td><a onclick="ValidatePuzzle4()">PR5486.A2R5</a></td>
-            <td><a onclick="Puzzle4Wrong()">PT2663.A64 R4513</a></td>
-            <td><a onclick="Puzzle4Wrong()">Mortlake 07844</a></td>
-            <td><a onclick="Puzzle4Wrong()">DU615.B56 1978</a></td>
+            <td><a onclick="MultipleChoiceCorrect('puzzle4')">PR5486.A2R5</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle4')">PT2663.A64 R4513</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle4')">Mortlake 07844</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle4')">DU615.B56 1978</a></td>
           </tr>
         </tbody>
       </table>
@@ -194,7 +194,7 @@
         <p>
           Indeed that is the location of the tome that will guide you! 
         </p>
-        <a class="next-btn" href="#puzzle1dir">Next</a>
+        <a onclick="GetRandomPuzzle('puzzle4next')" class="next-btn" id="puzzle4next">Next</a>
       </div>
       <a class="back-btn" href="#puzzle4dir">Back</a>
     </div>
@@ -214,7 +214,7 @@
     </div>
 
     <!-- Puzzle 5 -->
-    <div id="puzzle5" class="grid-container">
+    <div id="puzzle5" class="grid-container">      
       <h1>The Parrot</h1>
       <p>
         The piratical parrot perched on a spar looks down as you arrive, head cocked to the side. <br/> 
@@ -229,10 +229,10 @@
       <table>
         <tbody>
           <tr>
-            <td><a onclick="Puzzle5Wrong()">5</a></td>
-            <td><a onclick="ValidatePuzzle5()">8</a></td>
-            <td><a onclick="Puzzle5Wrong()">6</a></td>
-            <td><a onclick="Puzzle5Wrong()">9</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle5')">5</a></td>
+            <td><a onclick="MultipleChoiceCorrect('puzzle5')">8</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle5')">6</a></td>
+            <td><a onclick="DisplayWrongAnswerText('puzzle5')">9</a></td>
           </tr>
         </tbody>
       </table>
@@ -241,7 +241,7 @@
         <p>
           8 indeed is the number to be found! The piratical parrot winks his wise eye at you and points you to your next destination! 
         </p>
-        <a class="next-btn" href="#puzzle4dir">Next</a>     
+        <a onclick="GetRandomPuzzle('puzzle5next')" class="next-btn" id="puzzle5next">Next</a>
       </div>
       <a class="back-btn" href="#puzzle5dir">Back</a>
     </div>
@@ -274,7 +274,7 @@
       </p>
       <form>
         Answer: <input id="puzzle6Ans" type="text"/><br/>
-        <input type="button" value="Solve" onclick="ValidatePuzzle6()"/>
+        <input type="button" value="Solve" onclick="InputPuzzle('puzzle6', 'dead mans chest')" />
       </form>
       <p id="puzzle6-wrong-ans"> That doesn’t seem right! Solve the maze to see which symbols spell the answer!</p>
       <div class="solved-riddle" id="puzzle6-correct">
@@ -313,7 +313,7 @@
         
         Return to the Information Desk and tell the staff member how many coins are in the chest to claim your prize!        
       </p>
-      <a class="feedback-btn" href="#feedback">Finish </a>
+      <a class="next-btn" href="#feedback">Finish </a>
       <a class="back-btn" href="#finishdir">Back</a></div>
     </div>
 
@@ -330,13 +330,7 @@
     </div>
 
     <!-- JavaScript files -->
-    <script src="../../js/Collapsible.js"></script>
-    <script src="../../js/Puzzle1.js"></script>
-    <script src="../../js/Puzzle2.js"></script>
-    <script src="../../js/Puzzle3.js"></script>
-    <script src="../../js/Puzzle4.js"></script>
-    <script src="../../js/Puzzle5.js"></script>
-    <script src="../../js/Puzzle6.js"></script>
+    <script src="../js/escape_room.js"></script>
 
   </body>
 </html>

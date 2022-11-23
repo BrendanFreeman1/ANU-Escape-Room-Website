@@ -8,13 +8,8 @@
     <title>ANU Escape Room</title>    
   </head>
 
-    <!-- When this page loads the randomPath function is called, getting a random number between 0 and 5.
-    This determines which 'next' button will appear when the user presses begin. 
-    Each next button opens a different html file, each with a unique sequence for the questions.
-    This is so that the groups of students follow different paths through the library and dont all go the same way.-->
-
-  <body onload="RandomPath()">   
-    <div id="intro" class="grid-container"></div>
+  <body onload="SetPuzzlesArray([1,2,3,4,5])">   
+    <div class="grid-container"></div>
       <h1>Ahoy me hearties!</h1>
       <p>
         Look at these brave souls, come to seek the long-lost treasure of infamous Pirate Captain Flint! <br/><br/>
@@ -27,39 +22,13 @@
       <div class="hint">
         <div class="intro" id="0">
           <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence1/index.html#puzzle1dir">Next</a>
-        </div>
-
-        <div class="intro" id="1">
-          <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence2/index.html#puzzle5dir">Next</a>
-        </div>
-
-        <div class="intro" id="2">
-          <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence3/index.html#puzzle2dir">Next</a>
-        </div>
-
-        <div class="intro" id="3">
-          <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence4/index.html#puzzle3dir">Next</a>
-        </div>
-
-        <div class="intro" id="4">
-          <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence5/index.html#puzzle4dir">Next</a>
-        </div>
-
-        <div class="intro" id="5">
-          <p> Set sail and seek the treasure! </p>
-          <a class="next-btn" href="modules/html/sequence6/index.html#puzzle1dir">Next</a>
+          <a onclick="GetRandomPuzzle('front-page')" class="next-btn" id="front-page" href="#">Next</a>
         </div>
       </div>
     </div>
 
     <!-- JavaScript files -->
-    <script src="modules/js/Collapsible.js"></script>
-    <script src="modules/js/RandomPath.js"></script>
+    <script src="modules/js/escape_room.js"></script>
 
   </body>
 </html>
