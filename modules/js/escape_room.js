@@ -32,11 +32,11 @@ function GetRandomPuzzle(id)
   //If all puzzles are completed, serve the last puzzle
   if(puzzlesArray.length < 1) 
   {
-    button.href = `/ANU-Escape-Room-Website/modules/html/index.html#puzzle6dir`;
+    button.href = `https://brendanfreeman1.github.io/ANU-Escape-Room-Website/modules/html/index.html#puzzle6dir`;
   } else {
     //Get a random puzzle from the array
     let index = Math.round(Math.random() * (puzzlesArray.length - 1));    
-    button.href = `/ANU-Escape-Room-Website/modules/html/index.html#puzzle${puzzlesArray[index]}dir`;
+    button.href = `https://brendanfreeman1.github.io/ANU-Escape-Room-Website/modules/html/index.html#puzzle${puzzlesArray[index]}dir`;
     //Remove it from the array
     puzzlesArray.splice(index, 1);
     SetPuzzlesArray(puzzlesArray);
